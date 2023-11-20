@@ -1,4 +1,6 @@
 # DW Moderno e Data Lake - Redshift - S3 - Google Data Studio
+Projeto de implementação de um DW Moderno utilizando o Redshift 
+
 
 ### ROTEIRO DO PROJETO
 
@@ -84,6 +86,28 @@ CREATE TABLE ItensVenda (
     PRIMARY KEY (IDProduto, IDVenda)
 );
 ```
+
+### Criar e configurar um Bucket (S3)
+
+* Então, através de um Bucket, você consegue criar um repositório para importar os arquivos.
+* entre no site da AWS para criar: https://aws.amazon.com/pt/s3/
+* crie um nome unico para o Bucket e mude a região para São Paulo
+
+![dw8](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/d83b9448-67cf-46d5-8268-a893c08dc965)
+
+* Com o Bucket criado pode Carregar os arquivos
+
+![dw 13](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/50a09ada-776b-41d8-aaa3-7d5198cc44ee)
+
+  
+* Então, pode clicar no menu, à direita, e você vai ir em Credenciais de Segurança. Criar uma chave de acesso.
+
+![dw 10](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/9f2bdbd9-e917-409e-a9b8-96d5384c9e23)
+
+### Carregar dados usando o Copy
+
+
+
 
 
 
