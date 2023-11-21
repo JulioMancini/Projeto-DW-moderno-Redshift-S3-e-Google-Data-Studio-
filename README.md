@@ -12,8 +12,8 @@ Projeto de implementação de um DW Moderno utilizando o Redshift
 * Carregar dados usando o Copy
 * Crirar tabela Desnormalizada
 * Configurar Redshif para acesso público
-*  Conectar ao Google Data studio
-*  Criar Dashboard " ad hoc"
+* Conectar ao Google Data studio
+* Criar Dashboard " ad hoc"
 
 ### MODELO DE DADOS
 
@@ -146,4 +146,17 @@ inner join vendedores vn on (vn.idvendedor = v.idvendedor)
 ![dw16](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/88d749e6-0f91-4518-ab75-8b2658dc85b0)
 
 * É impotante salvar o andpoint para usar no Google Data studio
+
+### Conectar ao Google Data studio
+
+* Para ultilizar o Google Data Studio basta entrar no site: https://lookerstudio.google.com/
+
+* Clicar no botão de coneção com o Redshift
+
+![dw 17](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/759d81f4-88b4-451f-a11d-078836459afd)
+
+* Colocar o endpoint
+* Importante remover a porta e o banco de dados . Deixando só o endereço do cluster durante o Shift.
+
+
 
