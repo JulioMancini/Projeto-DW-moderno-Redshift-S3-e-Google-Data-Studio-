@@ -107,14 +107,43 @@ CREATE TABLE ItensVenda (
 ### Carregar dados usando o Copy
 
 
+```bash
+copy Clientes
+from 'endereço da pasta S3'
+credentials 'aws_access_key_id= meu id;aws_secret_access_key=chave'            '
+region 'sa-east-1'
+delimiter ;
+IGNOREHEADER 1
+DATEFORMAT 'DD/MM/YYYY';
+```
 
+![dw 12](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/71de177a-42eb-41f4-adb4-cab4f6a60a49)
 
+* repetir o processo com os outros arquivos do bucket, com o copy em todos os arquivos podemos fazer consultas SQL.
 
+### Criando tabela Desnormalizada
 
+* Então agora vou criar uma tabela desnormalizada, que traga o nome do cliente, a data da venda, o nome do vendedor, o produto, a quantidade e o total da venda.
 
+```bash
+select clientes, data, nome as vendedor, produto, quantidade, total
+into fatovendas
+from vendas v
+inner join clientes c on (c.idcliente = v.idcliente)
+inner join itensvenda i on (i.idvenda = v.idvenda)
+inner join produtos p on (p.idproduto = i.idproduto)
+inner join vendedores vn on (vn.idvendedor = v.idvendedor)
+```
+### Configurar Redshif para acesso público
 
+* Por padrão o Redshift não vai estar disponivel publicamente
 
+![dw 15](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/3c722821-7c41-44fc-98b0-0966943f6522)
 
+* botão Ações ou eu vou clicar nele e vejo aqui o modificar a configuração publicamente
+* Então, tem que ir no botão ações e na opção: Modificar a configuração publicamente acessível
 
+![dw16](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/88d749e6-0f91-4518-ab75-8b2658dc85b0)
 
+* É impotante salvar o andpoint para usar no Google Data studio
 
