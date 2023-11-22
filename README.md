@@ -147,7 +147,7 @@ inner join vendedores vn on (vn.idvendedor = v.idvendedor)
 
 * É impotante salvar o andpoint para usar no Google Data studio
 
-### Conectar ao Google Data studio
+### Conectar ao Google Data studio e Criar Dashboard
 
 * Para ultilizar o Google Data Studio basta entrar no site: https://lookerstudio.google.com/
 
@@ -156,7 +156,30 @@ inner join vendedores vn on (vn.idvendedor = v.idvendedor)
 ![dw 17](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/759d81f4-88b4-451f-a11d-078836459afd)
 
 * Colocar o endpoint
-* Importante remover a porta e o banco de dados . Deixando só o endereço do cluster durante o Shift.
+* Importante remover a porta e o banco de dados dev, deixando só o endereço do cluster.
 
+1. IP ou nome do hoat
+
+`redshift-cluster-1-cmb0hv82ssgs-us-esst-1-redshift.amazonaws.com` 
+
+2. porta
+
+`5439`
+
+3. Banco de dados
+
+`ed`
+
+4. nome do usuário
+
+`awsuser`
+
+5. senha 
+
+`12345678aA` 
+
+* após autenticar podemos clicar na tabela desnormalizada que criamos "fatovendas"
+
+![dw 18](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/c2f564a0-ac7b-4dc7-be8e-08b15c7210cb)
 
 
