@@ -182,4 +182,8 @@ inner join vendedores vn on (vn.idvendedor = v.idvendedor)
 
 ![dw 18](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/c2f564a0-ac7b-4dc7-be8e-08b15c7210cb)
 
+* Aqui existem vários tipos de gráfico, então você pode colocar qualquer gráfico aqui de forma bem simples, configurar ele de forama bem intuitiva. Então, vamos crirar um relatório ad hoc.
 
+1. Relatório de vendas por produtos
+
+![dw 19](https://github.com/JulioMancini/Projeto-DW-moderno-Redshift-S3-e-Google-Data-Studio-/assets/145502330/b7321ca7-e605-4ac0-a0b0-e262259ab29f)
